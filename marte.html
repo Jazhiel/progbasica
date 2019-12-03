@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
     <title>Tu peso en un lugar donde pesas menos</title>
     <style>
         body {
@@ -15,23 +14,16 @@
 
 <script>
     var usuario = prompt("¿Cual es tu peso?");
-    var planeta = parseInt(prompt("¿Elige tu planeta\n1 es marte\n2 es jupiter?"));
     var peso = parseFloat(usuario);
     var g_tierra = 9.8;
     var g_marte = 3.7;
     var g_jupiter = 24.8;
     var peso_final;
-    var g_seleccionada;
 
-    if (planeta == 1) {
-        g_seleccionada = g_marte;
-    } else {
-        g_seleccionada = g_jupiter;
-    }
-
-    peso_final = peso * g_seleccionada / g_tierra;
+    peso_final = peso * g_marte / g_tierra;
     peso_final = peso_final.toFixed(2);
 
+    Document.write("Tu peso en marte es <strong>" + peso_final + " kilos </strong>");
     document.write("Tu peso en marte es <strong>" + peso_final + " kilos </strong>");
 </script>
 </body>
